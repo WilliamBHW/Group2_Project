@@ -1,68 +1,56 @@
-# Group 2 Final Project
+# Confirmed Cases of COVID-19 in Ontario
 
-
-## Current Project Segment - One
-
-
-## Group Members
-Mohammad Ali Sakhi, Patrick Moores, Ramon Sa, Somto Esomeju, William Wang, (Mark Fulton - TA)
-
-
-## Communication Protocols
-- meet twice per week during class time
-- group communication over Slack
-
-
-## Roles - Week 1
-Square - responsible for the repository.  
-Responsible:   
-Triangle - create a mockup of a machine learning model. This can even be a diagram that explains how it will work concurrently with the rest of the project steps.  
-Responsible:   
-Circle - create a mockup of a database with a set of sample data, or even fabricated data. This will ensure that the database works seamlessly with the rest of the project.  
-Responsible:     
-Cross - decide which technologies to use for each step of the project.  
-Responsible: Group discussion.    
-
-
-
-## Topic
-Build a machine learning model to provide classification status to cities/regions are at higher risk, may need booster vaccines to control spread and outbreaks.
-Rationale for Topic Selection: Need for boosters has become a public policy topic. COVID vaccinations are expected to become an annual need. Provide cities with appropriate planning tools to deal with outbreaks or increases in infection rates.
-
-
-## Data Source
-- Description of source data
-- Questions to be answered with data: rate of vaccination (one dose, two doses, 2 does + booster), rates of infection
-
-- https://search.open.canada.ca/en/od/?sort=score%20desc&page=1&search_text=covid&od-search-portal=Open%20Data
-- https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html
-- https://covid19.who.int/info/
+## Group 2 Members
+Mohammad Ali Sakhi, Patrick Moores, Ramon Sa, Somto Esomeju, Bo Wang, Mark Fulton (TA)
  
 
-## Machine Learning Model
-- present a provisional machine learning model that:
-- takes in data from the provisional database
-- output(s) labels for the input data (i.e. print columns and datatypes)
+## Topic
+**Purpose:** To analyze confirmed COVID-19 cases in Ontario for similarities and patterns. An unsupervised machine learning model was built to cluster Public Health Unit service delivery areas (PHUs) according to case frequency. The output information from our model will provide government with data to create vaccine distribution plans based on patterns of case frequency.
+
+**Rationale for Topic Selection:** The importance of having an annual COVID-19 vaccination plan in Ontario has become increasingly apparent as a public health and policy issue. Case numbers continue to rise (as of Dec 2021) and new variants of the virus continue to emerge.
+
+**Project Questions**    
+**Q1.** How are confirmed cases of COVID-19 distributed across Ontario? What similarities differences are there between public health unit areas (PHU’s)? Can seasonal patterns be observed?     
+**Q2.** Can unsupervised machine learning be used to cluster Ontario PHU’s based on similarity of confirmed COVID-19 cases? What do these clusters tell us? 
 
 
-## Database
-- present a provisional database that stands in for the final database and accomplishes:
-- Sample data that mimics the expected final database structure
-- Draft machine learning module is connected to the provisional database
+## Data Sources
+**Confirmed Positive Cases of COVID-19 in Ontario**   [Link](https://data.ontario.ca/en/dataset/confirmed-positive-cases-of-covid-19-in-ontario)
+
+**COVID-19 Vaccine Data in Ontario**   [Link](https://data.ontario.ca/dataset/covid-19-vaccine-data-in-ontario)
+
+**Ontario COVID-19 Outbreaks Data**   [Link](https://data.ontario.ca/dataset/ontario-covid-19-outbreaks-data)
 
 
 ## Technologies
-- Data preparation (Pandas/SQL)
-- Machine learning (Scilearn/Tensorflow)
-- Visualization Dashboard (Tableau)
+- Database: PostgreSQL
+- Cloud Database: Amazon AWS RDS
+- Data Preparation and Feature Engineering: PostgreSQL, Python
+- Unsupervised Machine Learning: Python
+- Visualizations: Python, Tableau
 
 
-## GitHub Deliverables - Segment One
-- One branch per team member (complete - screenshot?)
-- Each team member has at least 4 commits for project segment 1 (I'm not sure how this happens in the first segment - PM)
+## Database
+**ERD Diagram:**  [Link](https://github.com/pmoores/Group2_Project/blob/main/database/img/ERD.png)
 
 
-## Files for Segment One
-- Readme.md (project sketch)
+## Machine Learning Model
+**Unsupervised Machine Learning Model Flowchart:**   [Link](https://github.com/pmoores/Group2_Project/blob/main/Images/ML%20Model%20Overview.pdf)
 
+
+## Dashboard
+**Tableau Dashboard:**  [Link](https://public.tableau.com/app/profile/somto.esomeju/viz/PHU_demo/PHUbyquarter?publish=yes)
+
+
+## Presentation
+**Google Slides Presentation:**  [Link](https://docs.google.com/presentation/d/1GRAW5DcUnJiMPy0EA99P2qMoqcQWGWLsmU2lP00eoZc/edit?usp=sharing)
+
+
+## Observations
+- Case frequencies are highest in the following three Public Health Unit Areas: Toronto, Peel, York Region.   
+- Unsupervised machine learning model clustered Toronto and Peel together.  
+
+
+## Conclusion
+Toronto and Peel Region are hotspots for COVID-19 cases in Ontario and should be given first priority when government develops an annual vaccination plan.
 
